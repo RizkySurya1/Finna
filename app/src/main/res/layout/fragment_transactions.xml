@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="16dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tv_date" android:text="KAMIS, 2 JULI"
+                android:textColor="@color/muted_foreground" android:textSize="11sp"
+                android:letterSpacing="0.08"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Transaksi" android:textColor="@color/foreground"
+                android:textSize="21sp" android:textStyle="bold" android:layout_marginTop="2dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <FrameLayout android:layout_width="44dp" android:layout_height="44dp"
+            android:background="@drawable/bg_avatar_circle">
+            <TextView android:text="💰" android:textSize="18sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp">
+
+        <!-- Search + filter -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/bg_search_field" android:layout_marginBottom="12dp"
+            android:paddingStart="14dp" android:paddingEnd="6dp">
+            <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                android:src="@drawable/ic_search" app:tint="@color/muted_foreground"
+                android:contentDescription="Cari" android:alpha="0.6"/>
+            <EditText android:id="@+id/et_search"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:background="@android:color/transparent" android:hint="Cari transaksi..."
+                android:textSize="14sp" android:paddingStart="10dp" android:paddingEnd="4dp"
+                android:singleLine="true" android:imeOptions="actionSearch" android:inputType="text"/>
+            <ImageButton android:id="@+id/btn_filter" android:layout_width="36dp" android:layout_height="36dp"
+                android:src="@drawable/ic_filter" app:tint="@color/muted_foreground"
+                android:background="@android:color/transparent" android:contentDescription="Filter"/>
+        </LinearLayout>
+
+        <!-- Segmented control: Semua / Pemasukan / Pengeluaran -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="44dp"
+            android:orientation="horizontal" android:background="@drawable/bg_segmented_control"
+            android:padding="4dp" android:layout_marginBottom="12dp">
+            <TextView android:id="@+id/tab_all" android:text="Semua"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:gravity="center" android:textSize="13sp" android:textStyle="bold"
+                android:textColor="@color/white" android:background="@drawable/bg_pill_active"/>
+            <TextView android:id="@+id/tab_income" android:text="Pemasukan"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:gravity="center" android:textSize="13sp" android:textColor="@color/muted_foreground"/>
+            <TextView android:id="@+id/tab_expense" android:text="Pengeluaran"
+                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                android:gravity="center" android:textSize="13sp" android:textColor="@color/muted_foreground"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/tv_empty_state"
+            android:text="🔍 Tidak ada transaksi ditemukan"
+            android:textColor="@color/muted_foreground" android:textSize="14sp"
+            android:gravity="center" android:padding="32dp" android:visibility="gone"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_transactions"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingStart="16dp" android:paddingEnd="16dp" android:clipToPadding="false"
+        android:paddingBottom="24dp"/>
+
+</LinearLayout>

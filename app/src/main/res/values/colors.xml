@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna inti tema -->
+    <color name="primary">#008080</color>
+    <color name="primary_dark">#006666</color>
+    <color name="accent">#FF9F43</color>
+
+    <!-- Status transaksi -->
+    <color name="income">#27AE60</color>
+    <color name="expense_color">#E74C3C</color>
+    <color name="warning">#FF9F43</color>
+
+    <!-- Netral / teks -->
+    <color name="background">#F8F9FA</color>
+    <color name="foreground">#1A1A2E</color>
+    <color name="text_secondary">#374151</color>
+    <color name="muted_foreground">#6B7280</color>
+    <color name="white">#FFFFFF</color>
+    <color name="border">#E5E7EB</color>
+
+    <!-- Permukaan komponen (chip, progress track, dsb) -->
+    <color name="surface_muted">#F3F4F6</color>
+    <color name="progress_track">#E9EBEE</color>
+    <color name="handle_bar">#DDDDDD</color>
+
+    <!-- Overlay putih transparan (kartu saldo di atas warna primary) -->
+    <color name="white_overlay_soft">#26FFFFFF</color>
+    <color name="white_overlay_strong">#CFFFFFFF</color>
+    <color name="white_overlay_label">#B0FFFFFF</color>
+
+    <!-- Indikator tab aktif bottom navigation (soft teal, bukan ungu default Material3) -->
+    <color name="nav_indicator">#E1F5EE</color>
+
+    <!-- Background launcher icon (dari desain logo terbaru) -->
+    <color name="ic_launcher_background">#348881</color>
+</resources>

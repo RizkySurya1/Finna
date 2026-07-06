@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.example.finna.ui.home.HomeFragment"
+        android:label="Beranda">
+        <action android:id="@+id/action_home_to_transactions"
+            app:destination="@id/transactionsFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/transactionsFragment"
+        android:name="com.example.finna.ui.transactions.TransactionsFragment"
+        android:label="Transaksi"/>
+
+    <fragment android:id="@+id/analyticsFragment"
+        android:name="com.example.finna.ui.analytics.AnalyticsFragment"
+        android:label="Analitik"/>
+
+    <fragment android:id="@+id/budgetFragment"
+        android:name="com.example.finna.ui.budget.BudgetFragment"
+        android:label="Anggaran"/>
+</navigation>

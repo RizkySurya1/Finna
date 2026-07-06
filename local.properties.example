@@ -1,0 +1,4 @@
+# Ganti dengan path SDK Android di komputer kamu, lalu rename file ini menjadi local.properties
+# Windows contoh: sdk.dir=C\:\\Users\\NamaKamu\\AppData\\Local\\Android\\Sdk
+# Mac contoh:     sdk.dir=/Users/NamaKamu/Library/Android/sdk
+sdk.dir=/path/to/your/Android/sdk
